@@ -44,61 +44,77 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: lightcoral;
-    padding: 100px 0;
+    background-image: url('https://plus.unsplash.com/premium_photo-1670348051093-a3f94b408bcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmFpbHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: lightpink;
+    color: white;
+    position: relative;
 }
 
+/* Hero Text */
 .hero h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
 
 .hero p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+/* Call to Action Button */
 .cta-button {
     background-color: pink;
     color: beige;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 30px; 
     border-radius: 5px;
     font-weight: bold;
+    text-transform: uppercase; 
 }
 
 .cta-button:hover {
     background-color: lightcoral;
 }
 
+
 /* Services Section */
 .services {
     padding: 50px 0;
     text-align: center;
+    background-color: #f8f8f8;
 }
 
 .services h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #333;
 }
 
 .service-card {
     display: inline-block;
-    width: 35%;  /* Increased from 30% to make the cards wider */
-    background-color: lightgrey;
-    padding: 30px;  /* Increased padding for more space inside the card */
+    width: 22%; /* Adjusted for better spacing */
+    background-color: #fff;
+    padding: 20px;
     margin: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .service-card .image-container {
-    height: 250px;  /* Increased height of image container */
+    height: 250px;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -111,12 +127,12 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0; /* Hide image initially */
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
 
 .service-card:hover .image-container img {
-    opacity: 1; /* Show image on hover */
+    opacity: 1;
 }
 
 .service-card .text {
@@ -127,23 +143,25 @@ nav ul li a:hover {
 }
 
 .service-card h3 {
-    font-size: 1.8em;  /* Increased font size for a more prominent title */
+    font-size: 1.8em;
     margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
 }
 
 .service-card p {
-    font-size: 1.2em;  /* Slightly bigger text for a more readable description */
+    font-size: 1.1em;
+    color: #666;
 }
 
 /* Hover effect for whole card */
-.service-card:hover .image-container {
-    transform: scale(1.05); /* Slight zoom effect when hovered */
+.service-card:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Hover effect for whole card */
 .service-card:hover .image-container {
-    transform: scale(1.1); /* Slightly zoom the image */
+    transform: scale(1.05); /* Zoom effect for image on hover */
 }
 
 
@@ -153,41 +171,87 @@ nav ul li a:hover {
     padding: 50px 0;
     text-align: center;
     position: relative;
+    color: white; /* Make sure text is visible on palevioletred background */
 }
 
 .why-choose-us h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #fff;
 }
 
+/* Style for each card */
 .why-card {
     background-color: pink;
-    padding: 20px;
-    margin: 10px;
+    padding: 25px 20px; /* Added more padding for spacing */
+    margin: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-.why-choose-us:hover .why-card {
-    opacity: 1;
-    transform: translateY(0);
+/* Hover effect for the card */
+.why-card:hover {
+    background-color: #ff5c8d;  /* Slight darker pink for hover effect */
+    transform: translateY(-10px); /* Move card up when hovered */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Hover effect for the entire section */
 .why-choose-us:hover {
-    background-color: gray;
+    background-color: #d0d0d0; /* Change background to gray on hover */
 }
 
 .why-choose-us:hover h2 {
     color: white;
 }
 
+/* Text styling inside the card */
 .why-card p {
-    font-size: 1.2em;
+    font-size: 1.3em; /* Increase font size for better readability */
     color: white;
+    font-weight: 500;
+    margin: 0;
 }
+
+/* Reveal effect when cards come into view */
+.why-choose-us .why-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.why-choose-us .why-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.why-choose-us .why-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.why-choose-us .why-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.why-choose-us .why-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for reveal animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Pricing Section */
 .pricing {
@@ -198,32 +262,75 @@ nav ul li a:hover {
 
 .pricing h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #fff;
 }
 
+/* Styling for categories (Manicure, Toes, Length, etc.) */
+.price-category {
+    margin-bottom: 30px;
+}
+
+/* Each individual card for services */
 .price-card {
     display: inline-block;
-    width: 30%;
+    width: 25%;  /* Adjusted to make the cards more compact */
     background-color: white;
     padding: 20px;
-    margin: 15px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.price-card h3 {
-    font-size: 1.8em;
+/* Hover effect for price cards */
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card titles (e.g., Basic Manicure, Gel Nails) */
+.price-card h4 {
+    font-size: 1.6em;
     margin-bottom: 10px;
+    color: #ff5c8d;  /* Light pink color for the title */
 }
 
+/* Price text (e.g., $15, $50) */
 .price-card p {
-    font-size: 1.5em;
-    color: pink;
+    font-size: 1.3em;
+    color: #333;
+    font-weight: 700;
+    margin: 0;
 }
+
+/* For the sections like "Manicure", "Toes", etc. */
+.price-category h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Responsiveness: Stack price cards in smaller screens */
+@media (max-width: 768px) {
+    .price-card {
+        width: 45%;  /* For tablet screens, make the cards a bit wider */
+    }
+}
+
+@media (max-width: 480px) {
+    .price-card {
+        width: 90%;  /* On small screens, let the cards take up most of the screen */
+    }
+}
+
 
 /* Where to Find Us Section */
 .find-us {
-    background-color: pink;
+    background-color: #ff8da1;  /* Lighter shade of pink */
     padding: 50px 0;
     text-align: center;
 }
@@ -231,20 +338,53 @@ nav ul li a:hover {
 .find-us h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #fff;
+}
+
+.find-us p {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
 .find-us address {
     font-size: 1.2em;
     line-height: 1.5;
+    color: #fff;
 }
 
 .find-us address p {
     margin: 5px 0;
 }
 
+.find-us address a {
+    color: #ff5c8d; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.find-us address a:hover {
+    text-decoration: underline;
+}
+
+/* Google Map Container */
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Responsiveness for map iframe */
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Contact/Booking Section */
 .contact {
-    background-color: white;
+    background-color: #f8f8f8; 
     padding: 50px 0;
     text-align: center;
 }
@@ -252,48 +392,77 @@ nav ul li a:hover {
 .contact h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #ff5c8d;  
 }
 
 form {
-    max-width: 400px;
+    max-width: 500px;  
     margin: 0 auto;
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 form label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: bold;
+    color: #333;
 }
 
 form input,
 form select,
 form button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid white;
+    border: 1px solid #ddd;  
     border-radius: 5px;
+    font-size: 1em;
+}
+
+form input,
+form select {
+    background-color: #f9f9f9;
 }
 
 form button {
-    background-color: pink;
+    background-color: #ff5c8d;
     color: white;
     border: none;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: plum;
+    background-color: #ff4060;  
 }
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    form {
+        max-width: 90%;  
+    }
+
+    form button {
+        font-size: 1.2em; 
+    }
+}
+
 
 /* Footer */
 footer {
-    background-color: beige;
-    color: white;
+    background-color: #f2e6d9;  /* Ngjyrë e ngrohtë dhe e butë për bazën */
+    color: #333;  /* Ngjyrë gri për tekstin për kontrast */
     text-align: center;
     padding: 20px 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
 }
